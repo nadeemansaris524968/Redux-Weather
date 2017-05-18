@@ -6,10 +6,16 @@ constructor(props) {
         super(props);
 
         this.state = { term: ''};
+
+        // Since onInputchange uses 'this' inside, not binding it to the
+        // search_bar context will result in an error that the app cannot
+        // find this.setState.
+        this.onInputChange = this.onInputChange.bind(this);
     };
 
 onInputChange(event) {
     console.log(event.target.value);
+    this.setState({ term: event.target.value });
 }
 
 render() {
