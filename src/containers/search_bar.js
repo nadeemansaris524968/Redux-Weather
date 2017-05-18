@@ -18,9 +18,14 @@ onInputChange(event) {
     this.setState({ term: event.target.value });
 }
 
+onFormSubmit(event) {
+    //Prevents the browser from submitting form
+    event.preventDefault();
+}
+
 render() {
     return (
-        <form className="input-group">
+        <form onSubmit={this.onFormSubmit} className="input-group">
             <input 
                 placeholder="Get a five-day weather forecast in your favorite cities"
                 className="form-control"
