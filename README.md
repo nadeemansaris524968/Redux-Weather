@@ -1,4 +1,6 @@
-# ReduxSimpleStarter
+# Redux - Weather
+
+A simple weather app that talks with OpenWeatherMaps API. You can look up weather of any city or state in the US. This weather app displays 5 day weather data in the form of a graph. The graph is drawn using Sparkline library. 
 
 Interested in learning [Redux](https://www.udemy.com/react-redux/)?
 
